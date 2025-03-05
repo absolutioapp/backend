@@ -21,7 +21,4 @@ export class PrismaService extends PrismaClient{
       return false;
     }
   }
-
-  async
-
 }
