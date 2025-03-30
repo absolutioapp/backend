@@ -37,3 +37,9 @@ model Style {
   name String
   users User[]
 }
+
+model Emotion {
+  id Int @id @default(autoincrement())
+  name String @unique
+  keyWords String[]
+}
