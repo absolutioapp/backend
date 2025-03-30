@@ -5,6 +5,7 @@ import { LoggerModule } from 'nestjs-pino';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { UserDataRequest } from './types/auth/UserDataRequest';
 import { getConfigFilePath } from './config/configuration';
+import { AdministrationModule } from './modules/postgres/administration/administration.module';
 
 @Module({
   imports: [ApiModule, PostgresModule,
@@ -30,6 +31,7 @@ import { getConfigFilePath } from './config/configuration';
       }),
       inject: [ConfigService],  
     }),
+    AdministrationModule,
   ],
 })
 export class AppModule {

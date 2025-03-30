@@ -24,7 +24,7 @@ constructor(private readonly logger:PinoLogger,) {
           },
         });
       
-        return users.map(user => new UserDto(user)); // ✅ Теперь ошибки не будет
+        return users.map(user => new UserDto(user)); 
       }
 
     async getAllTypes():Promise<TypeAccountDto[]>{
